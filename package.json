@@ -7,11 +7,9 @@
     "docusaurus": "docusaurus",
     "gen:snapshot": "node scripts/genCommunitySnapshot.mjs",
     "prestart": "node scripts/generate.mjs",
-    "start": "docusaurus start",
-    "predev": "node scripts/generate.mjs",
-    "dev": "docusaurus start",
-    "prebuild": "node scripts/generate.mjs --prod",
-    "build": "node scripts/buildPhased.mjs",
+    "start": "vite --host 0.0.0.0 --port 3000",
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
     "checks": "node scripts/checkClipboardFallback.mjs && node scripts/checkChunkReloadGuard.mjs && node scripts/checkAntdStyleWiring.mjs",
     "pretypecheck": "node scripts/generate.mjs && yarn checks",
     "typecheck": "tsc",
@@ -55,8 +53,13 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.18",
-    "typescript": "~6.0.3"
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5"
   },
   "browserslist": {
     "production": [

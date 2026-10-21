@@ -1,16 +1,7 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 export function toggleListItem<T>(list: T[], item: T): T[] {
-  const itemIndex = list.indexOf(item);
-  if (itemIndex === -1) {
-    return list.concat(item);
+  const index = list.indexOf(item);
+  if (index === -1) {
+    return [...list, item];
   }
-  const newList = [...list];
-  newList.splice(itemIndex, 1);
-  return newList;
+  return list.filter((i) => i !== item);
 }

@@ -1,0 +1,8 @@
+{
+  "name": "ChatGPT Shortcut",
+  "description": "AI prompt management and productivity shortcut directory for ChatGPT, Claude, Midjourney, and top AI tools.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
